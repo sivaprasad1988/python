@@ -13,4 +13,4 @@ class Solution(object):
     
 object = Solution()
 
-object.runningSum(nums = [1,2,3,4])    
+object.runningSum(nums = [1,2,3,4])

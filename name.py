@@ -1,20 +1,21 @@
-def calculate_love_score(name1, name2):
-    nameString = name1 + name2
-    checkStrings = ["true", "love"]
+student_scores = {
+    'Harry': 88,
+    'Ron': 78,
+    'Hermione': 95,
+    'Draco': 75,
+    'Neville': 60
+}
 
-    i = 0
-    score = ""
-    for checkString in checkStrings:
-        checkList = []
-        for checkChar in checkString.lower():
-            charCount = nameString.count(checkChar)
-            if charCount > 0:
-                checkList.append(charCount)
-        score += str(sum(checkList))
-        i += 1
-    print(score)
+student_grades = {}
 
+for students in student_scores:
+    if student_scores[students] >= 91 and student_scores[students] <= 100:
+        student_grades[students] = "Outstanding"
+    if student_scores[students] >= 81 and student_scores[students] <= 90:
+        student_grades[students] = "Exceeds Expectations"
+    if student_scores[students] >= 71 and student_scores[students] <= 80:
+        student_grades[students] = "Acceptable"
+    if student_scores[students] <= 70:
+        student_grades[students] = "Fail"
 
-
-
-calculate_love_score('Angela Yu', "Jack Bauer")
+print(student_grades)

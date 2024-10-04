@@ -25,8 +25,8 @@ def print_linked_list(head):
 
 
 # Creating two linked lists
-list1_values = [2, 4, 0]
-list2_values = [5, 6, 11]
+list1_values = [4, 5, 10]
+list2_values = [5, 6, 11,9]
 
 linked_list1 = create_linked_list(list1_values)
 linked_list2 = create_linked_list(list2_values)
@@ -51,13 +51,15 @@ class Solution(object):
                 total = x + y + carry
                 result = total % 10
                 carry = total // 10
+
                 current.next = ListNode(result)
                 current = current.next
-
                 if l1 is not None:
                     l1 = l1.next
+
                 if l2 is not None:
                     l2 = l2.next
+
 
             return head.next
 
